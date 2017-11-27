@@ -23,8 +23,8 @@ public class MainActivity extends AppCompatActivity {
 //        }
         AndroidShare share = new AndroidShare
                 .Builder(this)
-                .setPlatform(AndroidSharePlatform.INSTAGRAM)
-                .setImageUris(imageUris)
+                .setPlatform(AndroidSharePlatform.SYSTEMSHARE)
+//                .setImageUris(imageUris)
                 .setContent("test")
                 .build();
         share.share();

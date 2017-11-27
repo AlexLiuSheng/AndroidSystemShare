@@ -2,7 +2,7 @@
 a multitype share library base android system share
 ## include
 ```
-compile 'com.allenliu:AndroidSystemShare:1.0.0'
+compile 'com.allenliu:AndroidSystemShare:1.0.1'
 ```
 ### useage
 ```

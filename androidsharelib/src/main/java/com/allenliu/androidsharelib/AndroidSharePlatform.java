@@ -10,7 +10,7 @@ import java.lang.annotation.RetentionPolicy;
  */
 
 public class AndroidSharePlatform {
-    @IntDef({WECHAT, QQ, QZONE, WECHAT_TIMELINE, SINA, GMAIL, INSTAGRAM, FACEBOOK, WHATSAPP, TWITTER})
+    @IntDef({WECHAT, QQ, QZONE, WECHAT_TIMELINE, SINA, GMAIL, INSTAGRAM, FACEBOOK, WHATSAPP, TWITTER,SYSTEMSHARE})
     @Retention(RetentionPolicy.SOURCE)
     public @interface Platform {
     }
@@ -25,4 +25,5 @@ public class AndroidSharePlatform {
     public static final int FACEBOOK = 8;
     public static final int WHATSAPP = 9;
     public static final int TWITTER = 10;
+    public static final int SYSTEMSHARE=11;
 }

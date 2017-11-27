@@ -17,6 +17,7 @@ public class AndroidShare {
     private String title;
     private String content;
     private Context context;
+    private String systemShareTitle = "share";
 
     public void share() {
         try {
@@ -45,10 +46,13 @@ public class AndroidShare {
             shareIntent.putExtra(Intent.EXTRA_TEXT, content);
             shareIntent.putExtra("Kdescription", content);
         }
-
         shareIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_GRANT_READ_URI_PERMISSION);
-        shareIntent.setType("image/*");
-        context.startActivity(Intent.createChooser(shareIntent, "share img"));
+        if (imageUris != null)
+            shareIntent.setType("image/*");
+        else
+            shareIntent.setType("text/*");
+
+        context.startActivity(Intent.createChooser(shareIntent, systemShareTitle));
 
     }
 
@@ -93,6 +97,8 @@ public class AndroidShare {
                 break;
             case AndroidSharePlatform.WHATSAPP:
                 comp = new ComponentName("com.whatsapp", "com.whatsapp.ContactPicker");
+                break;
+            case AndroidSharePlatform.SYSTEMSHARE:
                 break;
         }
         if (comp != null)
