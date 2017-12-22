@@ -28,18 +28,22 @@ compile 'com.allenliu:AndroidSystemShare:1.0.1'
    - [X] SYSTEMSHARE
 - support multiple types sharing
 
-  |platform | pure text |  image  | multi images |
-  | --------|:----------|: ---------------|: -----------:|
-  | WECHAT  |Y          |Y                |Y             |
-  | WECHAT_TIMELINE  |Y          |Y                |Y             |
-  | QQ  |Y          |Y                |Y             |
-  | QZONE  |Y          |Y                |Y             |
-  | SINA  |Y          |Y                |Y             |
-  | INSTAGRAM  |N          |Y                |N             |
-  | FACEBOOK  |N          |Y                |Y             |
-  | WHATSAPP  |Y          |Y                |Y             |
-  | TWITTER  |Y          |Y                |N             |
-  | GMAIL  |N          |Y                |Y             |
-  | SYSTEMSHARE  |-          |-                |-             |
+
+   | platform | pure text |  image  | multi images |
+   | ------------- |:-------------|:-------------|:-------------:|
+   | WECHAT        | Y          | Y                | Y         |
+   | WECHAT_TIMELINE  | Y          | Y                | Y         |
+   | QQ           | Y          | Y                | Y             |
+   | QZONE        | Y          | Y                | Y             |
+   | SINA         | Y          | Y                | Y             |
+   | INSTAGRAM    | N          | Y                | N             |
+   | FACEBOOK     | N          | Y                | Y             |
+   | WHATSAPP     | Y          | Y                | Y             |
+   | TWITTER      | Y          | Y                | N             |
+   | GMAIL        | N          | Y                | Y             |
+   | SYSTEMSHARE  | -          | -                |-              |
+   
 
   
+  
+
