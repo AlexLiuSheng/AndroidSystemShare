@@ -17,16 +17,22 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ArrayList<Uri> imageUris = new ArrayList<>();
-//        for (int i = 0; i < 1; i++) {
-        imageUris.add(Uri.fromFile(new File("/storage/emulated/0/sina/weibo/weibo/img-43409e54deb4bef7a89d9f6f8fd98262.jpg")));
+        for (int i = 0; i < 1; i++) {
+//            if(i==0)
+            imageUris.add(Uri.fromFile(new File("/storage/emulated/0/sina/weibo/weibo/img-43409e54deb4bef7a89d9f6f8fd98262.jpg")));
+//            else
+//            imageUris.add(Uri.fromFile(new File("/storage/emulated/0/sina/weibo/weibo/img-2.jpg")));
+
 //        imageUris.add(Uri.fromFile(new File("/storage/emulated/0/Tencent/QQ_Images/-525b995ca35ecc2c.jpg")));
-//        }
+        }
         AndroidShare share = new AndroidShare
                 .Builder(this)
-                .setPlatform(AndroidSharePlatform.SYSTEMSHARE)
-//                .setImageUris(imageUris)
+                .setPlatform(AndroidSharePlatform.GMAIL)
+                .setImageUris(imageUris)
                 .setContent("test")
+                .setTitle("title")
                 .build();
         share.share();
+
     }
 }

@@ -61,6 +61,8 @@ public class AndroidShare {
         shareIntent.addCategory(Intent.CATEGORY_DEFAULT);
         switch (platform) {
             case AndroidSharePlatform.FACEBOOK:
+                //com.facebook.composer.activity.ComposerActivity
+                //com.facebook.composer.shareintent.ImplicitShareIntentHandlerDefaultAlias
                 comp = new ComponentName("com.facebook.katana", "com.facebook.composer.shareintent.ImplicitShareIntentHandlerDefaultAlias");
                 break;
             case AndroidSharePlatform.GMAIL:
