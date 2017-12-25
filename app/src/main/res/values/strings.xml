@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">AndroidSystemShare</string>
+    <string-array name="platForms">
+        <item>WECHAT</item>
+        <item>WECHAT_TIMELINE</item>
+        <item>QQ</item>
+        <item>QZONE</item>
+        <item>SINA</item>
+        <item>INSTAGRAM</item>
+        <item>FACEBOOK</item>
+        <item>WHATSAPP</item>
+        <item>TWITTER</item>
+        <item>GMAIL</item>
+        <item>SYSTEMSHARE</item>
+    </string-array>
+    <string-array name="shareType">
+        <item>Pure Text</item>
+        <item>Single Image</item>
+        <item>Multiple Images</item>
+    </string-array>
+
 </resources>

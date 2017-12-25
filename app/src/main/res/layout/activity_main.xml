@@ -9,76 +9,56 @@
     tools:context="com.allenliu.androidsystemshare.MainActivity">
 
     <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Share Content:" />
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/et_content"
+        android:layout_width="match_parent"
+        android:text="test"
+        android:layout_height="wrap_content"
+        android:hint="input your share content" />
+
+    <TextView
+        android:id="@+id/tv_select"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Platform Select:" />
 
-    <RadioGroup
-        android:id="@+id/radioGroup"
-
+    <android.support.v7.widget.AppCompatSpinner
+        android:id="@+id/plat_spinner"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"></android.support.v7.widget.AppCompatSpinner>
 
-        <RadioButton
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_type_select"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:checked="true"
-            android:text="WECHAT" />
+            android:text="Share Type Select:" />
 
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="WECHAT" />
+    </LinearLayout>
 
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="WECHAT" />
 
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="WECHAT" />
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="WECHAT" />
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="WECHAT" />
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="WECHAT" />
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="WECHAT" />
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="WECHAT" />
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="WECHAT" />
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="WECHAT" />
-    </RadioGroup>
+    <android.support.v7.widget.AppCompatSpinner
+        android:id="@+id/sharetype_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></android.support.v7.widget.AppCompatSpinner>
 
     <Button
         android:id="@+id/btnShare"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:elevation="0dp"
         android:text="Start Sharing" />
+
 </LinearLayout>

@@ -1,9 +1,12 @@
 package com.allenliu.androidsharelib;
 
+import android.app.Activity;
+import android.app.Fragment;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
+import android.util.Log;
 
 import java.util.ArrayList;
 
@@ -12,12 +15,14 @@ import java.util.ArrayList;
  */
 
 public class AndroidShare {
+    private static final int REQUEST_CODE_ALLEN_SHARE = 0X666;
     private int platform;
     private ArrayList<Uri> imageUris;
     private String title;
     private String content;
     private Context context;
     private String systemShareTitle = "share";
+    private AndroidShareListener shareListener;
 
     public void share() {
         try {
@@ -27,8 +32,13 @@ public class AndroidShare {
         }
     }
 
+    /**
+     * dont set share listener,it is no useful
+     * @param shareListener
+     */
     @Deprecated
     public void share(AndroidShareListener shareListener) {
+        this.shareListener = shareListener;
         Intent shareIntent = new Intent();
         shareIntent = getIntentByPlatform(shareIntent, platform);
 
@@ -51,8 +61,11 @@ public class AndroidShare {
             shareIntent.setType("image/*");
         else
             shareIntent.setType("text/*");
-
-        context.startActivity(Intent.createChooser(shareIntent, systemShareTitle));
+        if (context instanceof Activity) {
+            ((Activity) context).startActivityForResult(Intent.createChooser(shareIntent, systemShareTitle), REQUEST_CODE_ALLEN_SHARE);
+        } else {
+            context.startActivity(Intent.createChooser(shareIntent, systemShareTitle));
+        }
 
     }
 
@@ -147,6 +160,15 @@ public class AndroidShare {
             return this;
         }
 
-
     }
+
+    public static void onActivityResult(int requestCode, int resultCode, Intent data) {
+         if(requestCode==REQUEST_CODE_ALLEN_SHARE){
+             Log.e("shareLib","Share callback result code:"+resultCode+"");
+             if(resultCode==Activity.RESULT_OK){
+
+             }
+         }
+    }
+
 }
