@@ -5,7 +5,7 @@ and do not care about the result of sharing.
 
 ### GIF SHOW
 
-<img src="https://github.com/AlexLiuSheng/AndroidSystemShare/blob/master/ui/ui.gif" width=300/>
+
 
 ### include
 ```
